@@ -1,0 +1,4 @@
+Django>=4.1
+beret_utils
+environ
+psycopg2
