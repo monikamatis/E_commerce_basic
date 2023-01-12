@@ -1,4 +1,16 @@
+# Basic Django setup packages:
 Django>=4.1
 beret_utils
 environ
+
+# Package essential when using Postgresql.
 psycopg2
+
+# packages below are requried by various functions of an e-commerce site,
+# if using Django>4.1 and Python>3.11 most should be already installed.
+# If uncertain check with 'pip show package_name' command.
+asgiref>=3.5.2
+sqlparse>=0.4.2
+Pillow>=9.2.0
+flower>=1.2.0
+celery>=5.2.7
