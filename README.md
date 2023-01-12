@@ -1,4 +1,4 @@
-<img src="https://img.shields.io/badge/license-GPL--3.0-brightgreen">    <img src="https://img.shields.io/badge/python-3.11-blue">  <img src="https://img.shields.io/badge/Django-%3E4.1-blue">   <img src="https://img.shields.io/badge/python-3.11-blue">    <img src="https://img.shields.io/github/last-commit/Marysia-Software-Limited/E_commerce_basic">
+<a href="https://github.com/Marysia-Software-Limited/E_commerce_basic/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-brightgreen"></a>    <a href="https://docs.python.org/3.11/index.html"><img src="https://img.shields.io/badge/python-3.11-blue"></a>  <a href="https://docs.djangoproject.com/en/4.1/releases/4.1/"><img src="https://img.shields.io/badge/Django-%3E4.1-blue"></a>     <img src="https://img.shields.io/github/last-commit/Marysia-Software-Limited/E_commerce_basic">
 
 # E_commerce_basic:
 ## Basic Django e-commerce solution in 2 options: 
