@@ -1,3 +1,5 @@
+<img src="https://img.shields.io/badge/license-GPL--3.0-brightgreen">    <img src="https://img.shields.io/badge/python-3.11-blue">  <img src="https://img.shields.io/badge/Django-%3E4.1-blue">   <img src="https://img.shields.io/badge/python-3.11-blue">    <img src="https://img.shields.io/github/last-commit/Marysia-Software-Limited/E_commerce_basic">
+
 # E_commerce_basic:
 ## Basic Django e-commerce solution in 2 options: 
 
@@ -13,3 +15,4 @@ Simple e-commerce solution using custom models and basic customer UX.
 
 Using Django-Oscar to provide full spec functionality for an e-commerce site
 including downloads, subscriptions and multiple types of payment.
+
