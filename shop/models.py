@@ -1,5 +1,4 @@
 from django.db import models
-from django.core.validators import EmailValidator
 
 
 class Customers(models.Model):
@@ -30,3 +29,4 @@ class Customers(models.Model):
             return True
         else:
             return False
+
