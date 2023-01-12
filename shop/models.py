@@ -26,3 +26,5 @@ class Customer(models.Model):
         else:
             return False
 
+    def __str__(self):
+        return f'Customer {self.id}: {self.first_name} {self.last_name}'
