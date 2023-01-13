@@ -1,5 +1,33 @@
 from django.contrib import admin
-from .models import Customer
+from .models import Category, Product
 # Register your models here.
 
-admin.site.register(Customer)
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    """
+    Register the 'Category' model with a predefined list
+    of fields displayed in admin site;
+    Create slug automatically from name.
+    """
+    list_display = ['name', 'slug']
+    prepopulated_fields = {'slug': ('name',)}
+
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    """
+    Register the 'Product' model with a predefined list
+    of fields displayed in admin site;
+    Set fields editable from admin site.
+    Create slug automatically from name.
+    """
+    list_display = ['name',
+                    'slug',
+                    'price',
+                    'available',
+                    'created',
+                    'updated']
+    list_filter = ['available', 'created', 'updated']
+    list_editable = ['price', 'available']
+    prepopulated_fields = {'slug': ('name',)}
