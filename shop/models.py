@@ -34,7 +34,7 @@ class Category(models.Model):
 
     def get_absolute_url(self):
         """
-        Retrieve the URL to the product_list filtered by category.
+        Retrieve the URL from the product_list filtered by category.
         :return: URL as defined
         """
         return reverse('shop:product_list_by_category',
@@ -83,8 +83,8 @@ class Product(models.Model):
 
     def get_absolute_url(self):
         """
-        Retrieve the URL to the product_detail.
+        Retrieve the URL from the product_detail.
         :return: URL as defined
         """
         return reverse('shop:product_detail',
-                       args=[self.slug])
+                       args=[self.id, self.slug])
