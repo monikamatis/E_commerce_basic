@@ -1,34 +1,6 @@
 from django.db import models
+from django.urls import reverse
 
-
-# class Customer(models.Model):
-#     id = models.AutoField(primary_key=True)
-#     first_name = models.CharField(max_length=100,
-#                                   help_text='First name.')
-#     last_name = models.CharField(max_length=100,
-#                                  help_text='Last name.')
-#     email = models.EmailField(max_length=100,
-#                               help_text='Please type in your email.')
-#     password = models.CharField(max_length=100,
-#                                 default=None,
-#                                 help_text='Minimum length 8 characters')
-#     phone = models.CharField(max_length=10,
-#                              help_text='Contact number')
-#     newsletter = models.BooleanField(default=True,
-#                                      help_text='Sign up for our newsletter')
-#
-#     def register_customer(self):
-#         self.save()
-#
-#     def if_exists(self):
-#         if Customer.objects.filter(email=self.email):
-#             return True
-#         else:
-#             return False
-#
-#     def __str__(self):
-#         return f'Customer {self.id}: {self.first_name} {self.last_name}'
-#
 
 # Product catalog models Category and Product:
 class Category(models.Model):
@@ -59,6 +31,14 @@ class Category(models.Model):
         :return: descriptive title
         """
         return self.name
+
+    def get_absolute_url(self):
+        """
+        Retrieve the URL to the product_list filtered by category.
+        :return: URL as defined
+        """
+        return reverse('shop:product_list_by_category',
+                       args=[self.slug])
 
 
 class Product(models.Model):
@@ -100,3 +80,11 @@ class Product(models.Model):
         :return: descriptive title
         """
         return self.name
+
+    def get_absolute_url(self):
+        """
+        Retrieve the URL to the product_detail.
+        :return: URL as defined
+        """
+        return reverse('shop:product_detail',
+                       args=[self.slug])
