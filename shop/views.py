@@ -33,7 +33,7 @@ def product_detail(request, id, slug):
     Define a detailed product view.
     :param request: required parameter for any view function
     :param id: product id
-    :param slug: product slug
+    :param slug: product slug; its inclusion allows for SEO-friendly URLs
     :return: details of a product or 'not found' error page.
     """
     product = get_object_or_404(Product,
